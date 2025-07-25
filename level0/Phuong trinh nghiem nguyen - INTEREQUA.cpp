@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+#define I first
+#define II second
+#define ii pair<int,int>
+#define ll long long
+using namespace std;
+const long long P = 1e9+7;
+const int N = 1e6+10;
+const long long INF = 1e18;
+
+void input()
+{
+#define TASKNAME ""
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    if (fopen(TASKNAME ".inp", "r"))
+    {
+        freopen(TASKNAME ".inp", "r", stdin);
+        freopen(TASKNAME ".out", "w", stdout);
+    }
+}
+ll a,b;
+int main()
+{
+    input();
+    cin >> a >> b;
+    if(a==0 && b==0 || ((b==0 && a!=0)))
+    {
+        cout << "INFINITE SOLUTIONS";
+        return 0;
+    }
+    if(a==0 || b%a!=0)
+    {
+        cout << "NO SOLUTION";
+        return 0;
+    }
+    cout << -b/a;
+    return 0;
+}
+
